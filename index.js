@@ -67,6 +67,7 @@ function newCard(){
 			//
 			//
 			document.getElementById("doodoo").style.display= "block";
+			document.getElementById('pokemonLogo').style.opacity= '.5'
 
 
 		}
@@ -100,6 +101,7 @@ function newCardSearch(){
 			//
 			//
 			document.getElementById("doodoo").style.display= "block";
+			document.getElementById('pokemonLogo').style.opacity= '.5'
 		}
 })
 }
@@ -130,6 +132,7 @@ function newCard130(){
 			//
 			//
 			document.getElementById("doodoo").style.display= "block";
+			document.getElementById('pokemonLogo').style.opacity= '.5'
 		}
 })
 }
@@ -159,6 +162,7 @@ function newCard131(){
 			//
 			//
 			document.getElementById("doodoo").style.display= "block";
+			document.getElementById('pokemonLogo').style.opacity= '.5'
 		}
 })
 }
@@ -188,6 +192,7 @@ function newCard149(){
 			//
 			//
 			document.getElementById("doodoo").style.display= "block";
+			document.getElementById('pokemonLogo').style.opacity= '.5'
 		}
 })
 }
