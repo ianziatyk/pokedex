@@ -11,11 +11,26 @@
 
 //  }
 //  var pokemon=[pokemon1,pokemon2,pokemon3]
-var searchTitle = document.getElementById('searchTitle').value = getNum(1,150)
+var searchTitle = document.getElementById('searchTitle')
 var submit= document.getElementById('submit')
+var random = document.getElementById('random')
+var submit2 = document.getElementById ('submit2')
+var gyrados= document.getElementById('gyrados')
+var lapras= document.getElementById('lapras')
+var dragonite= document.getElementById('dragonite')
+
+random.addEventListener('click', newCard)
+submit2.addEventListener('click', newCardSearch)
+// gyrados.addEventListener('click', newCardByNum(130))
+// lapras.addEventListener('click', newCardByNum(131))
+// dragonite.addEventListener('click',newCardByNum(149))
+gyrados.addEventListener('click', newCard130)
+lapras.addEventListener('click', newCard131)
+dragonite.addEventListener('click',newCard149)
 
 
-submit.addEventListener('click', newCard)
+
+
 
 // document.addEventListener('load',getNum)
 
@@ -25,9 +40,10 @@ function getNum(min,max) {
   }
 
 
+
 function newCard(){
 
-	$.ajax({url:"https://fizal.me/pokeapi/api/"+searchTitle+".json",
+	$.ajax({url:"https://fizal.me/pokeapi/api/"+getNum(1,150)+".json",
 		success: function (response) {
 			console.log(response)
 			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+ ")"
@@ -48,11 +64,165 @@ function newCard(){
 			moveSymbol2.style.backgroundRepeat = "no-repeat"
 			moveSymbol2.style.backgroundSize = "100% 100%"
 			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			//
+			//
+			document.getElementById("doodoo").style.display= "block";
 
-			searchTitle= getNum(1,150)
+
 		}
 })
 }
+
+
+function newCardSearch(){
+
+	$.ajax({url:"https://fizal.me/pokeapi/api/"+searchTitle.value+".json",
+		success: function (response) {
+			console.log(response)
+			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+ ")"
+			pokeimage.style.backgroundRepeat = "no-repeat"
+			pokeimage.style.backgroundSize = "100% 100%"
+			image.style.backgroundImage ="url(images/background.jpg)"
+			image.style.backgroundSize ='100% 100%'
+			name1.innerHTML= response.species.name
+			hp.innerHTML=''+response.stats[5].base_stat+'HP'
+			type.innerHTML=''+response.types[0].type.name+'Pokémon'
+			weight1.innerHTML= 'Weight:'+response.weight+'lbs.'
+			height1.innerHTML= 'Height:'+response.height+'inches'
+			moveSymbol.style.backgroundImage= "url(images/water.png)"
+			moveSymbol.style.backgroundRepeat = "no-repeat"
+			moveSymbol.style.backgroundSize = "100% 100%"
+			moveName.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			moveSymbol2.style.backgroundImage= "url(images/water.png)"
+			moveSymbol2.style.backgroundRepeat = "no-repeat"
+			moveSymbol2.style.backgroundSize = "100% 100%"
+			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			//
+			//
+			document.getElementById("doodoo").style.display= "block";
+		}
+})
+}
+
+function newCard130(){
+
+	$.ajax({url:"https://fizal.me/pokeapi/api/"+130+".json",
+		success: function (response) {
+			console.log(response)
+			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+""	
+			pokeimage.style.backgroundRepeat = "no-repeat"
+			pokeimage.style.backgroundSize = "100% 100%"
+			image.style.backgroundImage ="url(images/background.jpg)"
+			image.style.backgroundSize ='100% 100%'
+			name1.innerHTML= response.species.name
+			hp.innerHTML=''+response.stats[5].base_stat+'HP'
+			type.innerHTML=''+response.types[0].type.name+'Pokémon'
+			weight1.innerHTML= 'Weight:'+response.weight+'lbs.'
+			height1.innerHTML= 'Height:'+response.height+'inches'
+			moveSymbol.style.backgroundImage= "url(images/water.png)"
+			moveSymbol.style.backgroundRepeat = "no-repeat"
+			moveSymbol.style.backgroundSize = "100% 100%"
+			moveName.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			moveSymbol2.style.backgroundImage= "url(images/water.png)"
+			moveSymbol2.style.backgroundRepeat = "no-repeat"
+			moveSymbol2.style.backgroundSize = "100% 100%"
+			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			//
+			//
+			document.getElementById("doodoo").style.display= "block";
+		}
+})
+}
+function newCard131(){
+
+	$.ajax({url:"https://fizal.me/pokeapi/api/"+131+".json",
+		success: function (response) {
+			console.log(response)
+			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+ ")"
+			pokeimage.style.backgroundRepeat = "no-repeat"
+			pokeimage.style.backgroundSize = "100% 100%"
+			image.style.backgroundImage ="url(images/background.jpg)"
+			image.style.backgroundSize ='100% 100%'
+			name1.innerHTML= response.species.name
+			hp.innerHTML=''+response.stats[5].base_stat+'HP'
+			type.innerHTML=''+response.types[0].type.name+'Pokémon'
+			weight1.innerHTML= 'Weight:'+response.weight+'lbs.'
+			height1.innerHTML= 'Height:'+response.height+'inches'
+			moveSymbol.style.backgroundImage= "url(images/water.png)"
+			moveSymbol.style.backgroundRepeat = "no-repeat"
+			moveSymbol.style.backgroundSize = "100% 100%"
+			moveName.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			moveSymbol2.style.backgroundImage= "url(images/water.png)"
+			moveSymbol2.style.backgroundRepeat = "no-repeat"
+			moveSymbol2.style.backgroundSize = "100% 100%"
+			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			//
+			//
+			document.getElementById("doodoo").style.display= "block";
+		}
+})
+}
+function newCard149(){
+
+	$.ajax({url:"https://fizal.me/pokeapi/api/"+149+".json",
+		success: function (response) {
+			console.log(response)
+			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+ ")"
+			pokeimage.style.backgroundRepeat = "no-repeat"
+			pokeimage.style.backgroundSize = "100% 100%"
+			image.style.backgroundImage ="url(images/background.jpg)"
+			image.style.backgroundSize ='100% 100%'
+			name1.innerHTML= response.species.name
+			hp.innerHTML=''+response.stats[5].base_stat+'HP'
+			type.innerHTML=''+response.types[0].type.name+'Pokémon'
+			weight1.innerHTML= 'Weight:'+response.weight+'lbs.'
+			height1.innerHTML= 'Height:'+response.height+'inches'
+			moveSymbol.style.backgroundImage= "url(images/water.png)"
+			moveSymbol.style.backgroundRepeat = "no-repeat"
+			moveSymbol.style.backgroundSize = "100% 100%"
+			moveName.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			moveSymbol2.style.backgroundImage= "url(images/water.png)"
+			moveSymbol2.style.backgroundRepeat = "no-repeat"
+			moveSymbol2.style.backgroundSize = "100% 100%"
+			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			//
+			//
+			document.getElementById("doodoo").style.display= "block";
+		}
+})
+}
+
+//  function newCardByNum(aNumber){
+
+// 	$.ajax({url:"https://fizal.me/pokeapi/api/"+aNumber+".json",
+// 		success: function (response) {
+// 			console.log(response)
+// 			pokeimage.style.backgroundImage = "url(" +response.sprites.front_shiny+ ")"
+// 			pokeimage.style.backgroundRepeat = "no-repeat"
+// 			pokeimage.style.backgroundSize = "100% 100%"
+// 			image.style.backgroundImage ="url(images/background.jpg)"
+// 			image.style.backgroundSize ='100% 100%'
+// 			name1.innerHTML= response.species.name
+// 			hp.innerHTML=''+response.stats[5].base_stat+'HP'
+// 			type.innerHTML=''+response.types[0].type.name+'Pokémon'
+// 			weight1.innerHTML= 'Weight:'+response.weight+'lbs.'
+// 			height1.innerHTML= 'Height:'+response.height+'inches'
+// 			moveSymbol.style.backgroundImage= "url(images/water.png)"
+// 			moveSymbol.style.backgroundRepeat = "no-repeat"
+// 			moveSymbol.style.backgroundSize = "100% 100%"
+// 			moveName.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+// 			moveSymbol2.style.backgroundImage= "url(images/water.png)"
+// 			moveSymbol2.style.backgroundRepeat = "no-repeat"
+// 			moveSymbol2.style.backgroundSize = "100% 100%"
+// 			moveName2.innerHTML = response.moves[getNum(1,response.moves.length-1)].move.name
+			
+			
+// 			document.getElementById("doodoo").style.display= "block";
+// 		}
+// })
+// }
+
+
 
 
 
@@ -118,4 +288,48 @@ function newCard(){
 // }
 
 
-// function hookImage(x)
+// function hookImage(x
+
+
+// class Pokemon{
+//     constructor(ajaxNumber){
+//         this.name;
+//         this.hp;
+//         this.attack;
+//         this.defense;
+//         this.abilities = [];
+//         this.getPokemon(ajaxNumber);
+//     }
+//     getPokemon(ajaxNumber){
+//         var that = this
+//         $.ajax({url: "https://fizal.me/pokeapi/api/"+ajaxNumber+".json",
+//         success: function(result){
+//                     that.hp = that.getHP(result)
+//                     that.attack = that.getAttack(result);
+//                     that.defense = that.getDefense(result);
+//                     that.abilities = that.getAbilities(result);
+//                     that.name = that.getName(result);
+//                 }    
+//         })
+//     }
+//     getName(result){
+//         //sends a name
+//         return result.name
+//     }
+//     getHP(result){
+//         return result.stats[5].base_stat
+//     }
+//     getAttack(result){
+//         return result.stats[4].base_stat
+//     }
+//     getDefense(result){
+//         return result.stats[3].base_stat
+//     }
+//     getAbilities(result){
+//         let abilityArray = [];
+//         for(let i = 0 ; i< result.abilities.length;i++){
+//             abilityArray.push(result.abilities[i].ability.name)
+//         }
+//         return abilityArray;
+//     }            
+// }

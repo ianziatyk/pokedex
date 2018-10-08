@@ -2,20 +2,29 @@
 <html>
 <head>
 	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
 
 
-<div class="load"></div>
+	<div class="searchBox"> 
+	<input id='searchTitle' type="text" placeholder="search by pokédex number" style="display:;">
+	<input id="submit2" type="submit" value="search" onkeypress="newCardsearch()">
+	<input id="random" type="submit" value="random" onkeypress="newCard()">
 
-	<div class="overallwrapper">
-	<div class="cardwrapper">
+
+</div>
+
+
+
+	<div id="doodoo" class="overallwrapper">
+	<div class="cardWrapper">
 			<div class="innercard">
 
 				
-				<div class="gyrados">
+				<div class="cardGrid">
 
 					<div class="one">
 						<div id="name1"></div>
@@ -69,33 +78,20 @@
 						<div id="xx"></div>
 					</div>
 					
-				</div> 
-
-
-
-
-
-
 				
-
-
 			
 			</div>
 	</div>
 	</div>
+</div>
 
+<div class="pokemonLogo"></div>
 
-	<div class="searchBox"> 
-	<input id='searchTitle' type="text" placeholder="search by pokédex number" style="display:;">
-	<input id="submit" type="submit" value="search" onkeypress="newCard()">
-
-
-
-
-
-
-
-
+<div class="balls">
+	<div class='ball' id="gyrados"><div id="numberText">130</div></div>
+	<div class="ball" id='lapras'><div id="numberText">131</div></div>
+	<div class="ball" id ='dragonite'><div id="numberText">149</div></div>
+</div>
 
 
 
@@ -128,7 +124,7 @@
 	</div>
  -->
 
-</div>
+
 
 
 </body>
